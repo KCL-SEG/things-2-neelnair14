@@ -8,4 +8,11 @@
   </h1>
   <p>Some stuff about things goes here.</p>
 </body>
+<!-- Display form and handle submission -->
+<form method="post" action="{% url 'home' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
+
 </html>
